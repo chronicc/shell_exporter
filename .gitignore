@@ -1,4 +1,4 @@
 .build
-shell_exporter
 *.tar.gz
+shell_exporter
 vendor

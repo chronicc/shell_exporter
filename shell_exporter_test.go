@@ -24,13 +24,13 @@ func TestShell(t *testing.T) {
 		shell := Shell{
 			Name: "shell_exporter_test",
 			Help: "shell exporter test metric",
-			Cmd: "hostname; echo $RANDOM",
+			Cmd:  "hostname; echo $RANDOM",
 			ConstLabels: map[string]string{
 				"env": "test",
 				"app": "shell_exporter",
 			},
 			LabelsRegexp: "(?P<hostname>.+)\n(?P<value>[0-9.]+)",
-			Bin: "/bin/bash",
+			Bin:          "/bin/bash",
 		}
 
 		shell.init()
